@@ -120,6 +120,10 @@ h6 {
 }
 
 body {
+  -webkit-transition: opacity 0.4s ease 0s;
+  -o-transition: opacity 0.4s ease 0s;
+  transition: opacity 0.4s ease 0s;
+  opacity: 1;
   background: -webkit-gradient(linear, left bottom, left top, from(rgb(43, 39, 74)), to(rgb(0, 0, 0)));
   background: -o-linear-gradient(bottom, rgb(43, 39, 74) 0%, rgb(0, 0, 0) 100%);
   background: linear-gradient(to top, rgb(43, 39, 74) 0%, rgb(0, 0, 0) 100%);

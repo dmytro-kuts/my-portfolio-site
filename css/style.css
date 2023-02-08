@@ -556,8 +556,7 @@ body {
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   min-height: 100%;
-  padding-top: 5rem;
-  padding-bottom: 1.875rem;
+  padding-bottom: 3.75rem;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
@@ -631,15 +630,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 1.875rem;
+  padding-bottom: 3.75rem;
 }
 
 .portfolios__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.25rem;
+  gap: 0.625rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -720,7 +718,6 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(43, 39, 74)), to(rgb(0, 0, 0)));
   background: -o-linear-gradient(top, rgb(43, 39, 74) 0%, rgb(0, 0, 0) 100%);
   background: linear-gradient(to bottom, rgb(43, 39, 74) 0%, rgb(0, 0, 0) 100%);
-  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -728,7 +725,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
+  gap: 0.875rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -757,7 +754,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 0.625rem;
 }
 
 .item-portfolio__link {
@@ -780,8 +777,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 1.875rem;
+  padding-bottom: 3.75rem;
 }
 
 .experience__body {
@@ -949,8 +945,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 6.25rem;
-  padding-bottom: 1.25rem;
+  padding-bottom: 3.75rem;
 }
 
 .education__body {
@@ -1216,12 +1211,16 @@ body {
             column-gap: 2.125rem;
   }
 
-  .footer__container {
-    padding-top: 2.5rem;
+  .bottom-page {
+    padding-bottom: 2.5rem;
   }
 
   .footer__container {
-    padding-bottom: 2.5rem;
+    padding-top: 5rem;
+  }
+
+  .main-section__container {
+    padding-top: 8.125rem;
   }
 
   .main-section__title:not(:last-child) {
@@ -1232,8 +1231,20 @@ body {
     margin-bottom: 2.5rem;
   }
 
+  .portfolios__container {
+    padding-top: 8.125rem;
+  }
+
   .portfolios__header {
     margin-bottom: 9rem;
+  }
+
+  .item-portfolio__body {
+    padding: 1.5rem;
+  }
+
+  .experience__container {
+    padding-top: 8.125rem;
   }
 
   .experience__body {
@@ -1252,6 +1263,10 @@ body {
 
   .content-experience__main {
     padding-top: 2rem;
+  }
+
+  .education__container {
+    padding-top: 8.125rem;
   }
 
   .education__title {
@@ -1298,12 +1313,16 @@ body {
             column-gap: 1.5625rem;
   }
 
+  .bottom-page {
+    padding-bottom: 1.25rem;
+  }
+
   .footer__container {
     padding-top: 1.25rem;
   }
 
-  .footer__container {
-    padding-bottom: 1.25rem;
+  .main-section__container {
+    padding-top: 5rem;
   }
 
   .main-section__title:not(:last-child) {
@@ -1314,8 +1333,20 @@ body {
     margin-bottom: 1.25rem;
   }
 
+  .portfolios__container {
+    padding-top: 5rem;
+  }
+
   .portfolios__header {
     margin-bottom: 1.875rem;
+  }
+
+  .item-portfolio__body {
+    padding: 0.875rem;
+  }
+
+  .experience__container {
+    padding-top: 5rem;
   }
 
   .experience__body {
@@ -1334,6 +1365,10 @@ body {
 
   .content-experience__main {
     padding-top: 1.25rem;
+  }
+
+  .education__container {
+    padding-top: 5rem;
   }
 
   .education__title {
@@ -1497,19 +1532,11 @@ body {
 }
 
 @media (max-width: 37.5em) {
-  .portfolios__header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-
   .portfolios__slider {
     margin-right: -0.9375rem;
     padding-right: 0.9375rem;
+    margin-left: -0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
@@ -1569,27 +1596,39 @@ body {
     }
 }
 
-@supports (padding-top: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
-    .footer__container {
-      padding-top: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem );
-    }
-}
-
-@supports not (padding-top: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
-    .footer__container {
-      padding-top: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
-    }
-}
-
 @supports (padding-bottom: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
-    .footer__container {
+    .bottom-page {
       padding-bottom: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem );
     }
 }
 
 @supports not (padding-bottom: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
-    .footer__container {
+    .bottom-page {
       padding-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , -0.0686813187rem  +  6.5934065934vw , 5rem )) {
+    .footer__container {
+      padding-top: clamp( 1.25rem , -0.0686813187rem  +  6.5934065934vw , 5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , -0.0686813187rem  +  6.5934065934vw , 5rem )) {
+    .footer__container {
+      padding-top: calc(1.25rem + 3.75 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .main-section__container {
+      padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .main-section__container {
+      padding-top: calc(5rem + 3.125 * (100vw - 20rem) / 56.875);
     }
 }
 
@@ -1617,6 +1656,18 @@ body {
     }
 }
 
+@supports (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .portfolios__container {
+      padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .portfolios__container {
+      padding-top: calc(5rem + 3.125 * (100vw - 20rem) / 56.875);
+    }
+}
+
 @supports (margin-bottom: clamp( 1.875rem , -0.6304945055rem  +  12.5274725275vw , 9rem )) {
     .portfolios__header {
       margin-bottom: clamp( 1.875rem , -0.6304945055rem  +  12.5274725275vw , 9rem );
@@ -1626,6 +1677,30 @@ body {
 @supports not (margin-bottom: clamp( 1.875rem , -0.6304945055rem  +  12.5274725275vw , 9rem )) {
     .portfolios__header {
       margin-bottom: calc(1.875rem + 7.125 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding: clamp( 0.875rem , 0.6552197802rem  +  1.0989010989vw , 1.5rem )) {
+    .item-portfolio__body {
+      padding: clamp( 0.875rem , 0.6552197802rem  +  1.0989010989vw , 1.5rem );
+    }
+}
+
+@supports not (padding: clamp( 0.875rem , 0.6552197802rem  +  1.0989010989vw , 1.5rem )) {
+    .item-portfolio__body {
+      padding: calc(0.875rem + 0.625 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .experience__container {
+      padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .experience__container {
+      padding-top: calc(5rem + 3.125 * (100vw - 20rem) / 56.875);
     }
 }
 
@@ -1678,6 +1753,18 @@ body {
 @supports not (padding-top: clamp( 1.25rem , 0.9862637363rem  +  1.3186813187vw , 2rem )) {
     .content-experience__main {
       padding-top: calc(1.25rem + 0.75 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .education__container {
+      padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 5rem , 3.9010989011rem  +  5.4945054945vw , 8.125rem )) {
+    .education__container {
+      padding-top: calc(5rem + 3.125 * (100vw - 20rem) / 56.875);
     }
 }
 

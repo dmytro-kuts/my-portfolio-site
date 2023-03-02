@@ -630,7 +630,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 3.75rem;
+  padding-bottom: 2.5rem;
 }
 
 .portfolios__header {
@@ -1446,11 +1446,6 @@ body {
 
   .menu__item:not(:last-child) {
     margin-bottom: 1.25rem;
-  }
-
-  .menu__link {
-    color: #fff;
-    font-size: 2.5rem;
   }
 
   .icon-menu {

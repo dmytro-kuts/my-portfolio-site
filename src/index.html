@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"HomePage" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section data-watch="navigator" class="page__main main-section">
+          <div class="main-section__container">
+            <div class="main-section__content">
+              <div class="main-section__title title">
+                <div class="title__lable">MY NAME IS</div>
+                <h1 class="title__value title__value_big">Dmytro <span>Kuts</span></h1>
+              </div>
+              <div class="main-section__text text">
+                <p>
+                  I am a passionate and detail-oriented front-end developer, working on a variety of
+                  projects ranging from simple websites to more complex web applications to create
+                  dynamic and interactive user interfaces. Looking for a position in a company where
+                  I can use my coding skills, solve complex problems and contribute to the timely
+                  completion of projects.
+                </p>
+              </div>
+              <div class="main-section__social social">
+                <a
+                  href="https://github.com/dmytro-kuts"
+                  target="_blank"
+                  class="social__link _icon-github"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/dmytro-kuts-v"
+                  target="_blank"
+                  class="social__link _icon-linkedin"
+                ></a>
+                <a
+                  href="https://www.facebook.com/dmitry.kuts.9"
+                  target="_blank"
+                  class="social__link _icon-facebook"
+                ></a>
+                <a
+                  href="https://t.me/DmytroKuts"
+                  target="_blank"
+                  class="social__link _icon-telegram"
+                ></a>
+              </div>
+            </div>
+            <div class="main-section__decor decor-main-section">
+              <div class="decor-main-section__box">
+                <div class="decor-main-section__image">
+                  <img src="@img/main/photo.png" alt="Photo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-watch="navigator" class="page__portfolio portfolio">
+          <div class="portfolio__container">
+            <div class="portfolio__header">
+              <div class="portfolio__title title">
+                <div class="title__lable">MY WORKS</div>
+                <h2 class="title__value">Portfolio</h2>
+              </div>
+            </div>
+            <div data-tabs data-tabs-animate class="portfolio__tabs tabs-portfolio">
+              <nav data-tabs-titles class="tabs-portfolio__navigation">
+                <button type="button" class="tabs-portfolio__title _tab-active">
+                  HTML/CSS/JavaScript
+                </button>
+                <button type="button" class="tabs-portfolio__title">ReactJS</button>
+                <button type="button" class="tabs-portfolio__title">Full Stack</button>
+              </nav>
+              <div data-tabs-body class="tabs-portfolio__content">
+                <div class="tabs-portfolio__body">
+                  <div class="tabs-portfolio__item item-project">
+                    <article class="item-project__columns item-project__columns_1">
+                      <div class="item-project__picture">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/full-stack-modeller.jpg"
+                              alt="Full Stack Modeller"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">Full Stack Modeller</h3>
+                        <div class="content-project__text">
+                          <p>
+                            The adaptive layout of 7 pages with animation. Optimized PageSpeed
+                            Insights 90+. The deadline is 6 days
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/modeller/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/modeller"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_2">
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">
+                          Portfolio Website Honored Artist of Ukraine
+                        </h3>
+                        <div class="content-project__text">
+                          <p>
+                            Performed full site development using such technologies as
+                            HTML/SCSS/JavaScript/PHP. Collected everything using Gulp/WebPack
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://www.vvkuts.com"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Website</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-project__picture item-project__picture_right">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/KutsV.jpg"
+                              alt="Portfolio Website Honored Artist of Ukraine"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_1">
+                      <div class="item-project__picture">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/farm-vest.jpg"
+                              alt="Full Stack Modeller"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">Landing page day/night FarmVest</h3>
+                        <div class="content-project__text">
+                          <p>
+                            The adaptive layout of the landing page day/night with animation, and
+                            parallax effect.
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/landing-day-night_farm/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/landing-day-night_farm"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_2">
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">Funiro landing Shop</h3>
+                        <div class="content-project__text">
+                          <p>
+                            Adaptive store layout with animation of adding products to the cart and
+                            parallax effect.
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/shop-add-cart_funiro/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/shop-add-cart_funiro"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-project__picture item-project__picture_right">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img data-src="@img/portfolio/funiro.jpg" alt="Funiro landing Shop" />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_1">
+                      <div class="item-project__picture">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/alex-portfolio.jpg"
+                              alt="landing page portfolio Alex."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">landing page portfolio Alex.</h3>
+                        <div class="content-project__text">
+                          <p>
+                            Responsive layout with smooth full-screen scrolling to triple block with
+                            added sliders and tabs.
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/landing-alex/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/landing-alex"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_2">
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">Landing page Go Surf</h3>
+                        <div class="content-project__text">
+                          <p>
+                            Responsive beautiful landing page about surfing implemented with many
+                            animations and various sliders with parallax effects.
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/landing_go-surf/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/landing_go-surf"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-project__picture item-project__picture_right">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img data-src="@img/portfolio/go-surf.jpg" alt="Landing page Go Surf" />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_1">
+                      <div class="item-project__picture">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img data-src="@img/portfolio/big-shop.jpg" alt="Big Shop" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">Big Shop</h3>
+                        <div class="content-project__text">
+                          <p>
+                            Responsive online store, which contains a rich variety of information
+                            insert sliders, a product card, and a page with filters.
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/big-shop/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/big-shop"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="tabs-portfolio__body">
+                  <div class="tabs-portfolio__item item-project">
+                    <article class="item-project__columns item-project__columns_1">
+                      <div class="item-project__picture item-project__picture_left">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/react-pizza.jpg"
+                              alt="Full Stack Modeller"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">React pizza</h3>
+                        <div class="content-project__text">
+                          <p>
+                            In this project I dealt with technologies like 'reduxjs/toolkit' for
+                            data storage and manipulation, with 'react-router-dom' for navigation
+                            without unnecessary rendering, and configured search logic, sorting when
+                            interacting with server requests using the 'axios' library.
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://react-pizza-dmytro-kuts.vercel.app/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Preview</a
+                          >
+                          <a
+                            href="https://github.com/dmytro-kuts/react-pizza"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >GitHub - code</a
+                          >
+                        </div>
+                      </div>
+                    </article>
+                    <article class="item-project__columns item-project__columns_2">
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">React mini project</h3>
+                        <div class="content-project__text">
+                          <p>Small various projects on react</p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://dmytro-kuts.github.io/react-mini-project-quiz/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Quiz</a
+                          >
+                          <a
+                            href="https://dmytro-kuts.github.io/react-mini-project-photos/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Photos</a
+                          >
+                          <a
+                            href="https://dmytro-kuts.github.io/react-mini-project-users/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Users</a
+                          >
+                          <a
+                            href="https://dmytro-kuts.github.io/react-mini-project-to_do_list/"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >To Do</a
+                          >
+                        </div>
+                      </div>
+                      <div class="item-project__picture item-project__picture_right">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/react-mini.jpg"
+                              alt="React mini project"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="tabs-portfolio__body">
+                  <div class="tabs-portfolio__item item-project">
+                    <article class="item-project__columns item-project__columns_1">
+                      <div class="item-project__picture item-project__picture_left">
+                        <div class="item-project__box">
+                          <div class="item-project__image-ibg">
+                            <img
+                              data-src="@img/portfolio/KutsV.jpg"
+                              alt="Portfolio Website Honored Artist of Ukraine"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-project__content content-project">
+                        <h3 class="content-project__title">
+                          Portfolio Website Honored Artist of Ukraine
+                        </h3>
+                        <div class="content-project__text">
+                          <p>
+                            Performed full site development using such technologies as
+                            HTML/SCSS/JavaScript/PHP. Collected everything using Gulp/WebPack
+                          </p>
+                        </div>
+                        <div class="content-project__actions">
+                          <a
+                            href="https://www.vvkuts.com"
+                            target="_blank"
+                            class="content-project__link _icon-link"
+                            >Website</a
+                          >
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-watch="navigator" class="page__experience experience">
+          <div class="experience__container">
+            <div class="experience__body">
+              <div class="experience__title title">
+                <div class="title__lable">Development</div>
+                <h2 class="title__value">Experience</h2>
+              </div>
+            </div>
+            <div class="experience__items">
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/05.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">HTML5</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/08.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">CSS3</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/09.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">SCSS</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/01.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">JavaScript</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/010.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">ReactJS</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/011.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">Redux</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/07.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">Git</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/03.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">Node.JS</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/02.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">MongoDB</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/04.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">Gulp</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/012.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">WebPack</div>
+              </div>
+              <div class="experience__item item-experience">
+                <div class="item-experience__icon">
+                  <img src="@img/experience/06.svg" alt="Icon" />
+                </div>
+                <div class="item-experience__label">Figma</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-watch="navigator" class="page__education education">
+          <div class="education__container">
+            <div class="education__title title">
+              <div class="title__lable">LEARNING PATH</div>
+              <h2 class="title__value">Education</h2>
+            </div>
+            <div class="education__body">
+              <div class="education__timeline timeline">
+                <div class="timeline__item">
+                  <h3 class="timeline__title">Itgid.info</h3>
+                  <div class="timeline__text">
+                    <a
+                      href="https://itgid.info/ua/certificate/view?Certificate[uid]=shxufy9u3mxf"
+                      target="_blank"
+                      class="_icon-link"
+                      >Certificate - ReactJS
+                    </a>
+                  </div>
+                  <div class="timeline__date">January 2023</div>
+                </div>
+                <div class="timeline__item">
+                  <h3 class="timeline__title">Itgid.info</h3>
+                  <div class="timeline__text">
+                    <a
+                      href="https://itgid.info/ua/certificate/view?Certificate%5Buid%5D=humt58rmmmpc"
+                      target="_blank"
+                      class="_icon-link"
+                      >Certificate - JavaScript</a
+                    >
+                  </div>
+                  <div class="timeline__date">December 2022</div>
+                </div>
+                <div class="timeline__item">
+                  <h3 class="timeline__title">Interregional Academy of Personnel Management</h3>
+                  <div class="timeline__text">
+                    Master's degree - International Economics and Banking
+                  </div>
+                  <div class="timeline__date">2008 - 2012</div>
+                </div>
+              </div>
+              <div class="education__content content-education">
+                <div class="content-education__image-ibg_contain">
+                  <img src="@img/education/Certificate_React.jpg" alt="Certificate_React" />
+                </div>
+                <div class="content-education__image-ibg_contain">
+                  <img src="@img/education/Certificate_JS.jpg" alt="Certificate_JS" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

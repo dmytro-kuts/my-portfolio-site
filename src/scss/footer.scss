@@ -1,0 +1,31 @@
+//====================================================================================================
+.footer {
+  // .footer__container
+  &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: rem(15);
+      @include adaptiveValue("padding-top", 40, 20);
+      @include adaptiveValue("padding-bottom", 40, 20);
+  }
+  // .footer__social
+  &__social {
+      .social__link {
+          color: $greyColor;
+          @media (any-hover: hover){
+              &:hover{
+                  color: $violetColor;
+              }
+          }
+      }
+  }
+  // .footer__copy
+  &__copy {
+      color: $greyColor;
+      font-size: rem(14);
+      line-height: math.div(17 , 14);
+  }
+}
+//====================================================================================================

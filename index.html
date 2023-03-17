@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230315021154">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230318012931">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,10 +38,10 @@
 				<div class="main-section__container">
 					<div class="main-section__content">
 						<div class="main-section__title title">
-							<div class="title__lable">MY NAME IS</div>
-							<h1 class="title__value title__value_big">Dmytro <span>Kuts</span></h1>
+							<div class="title__lable" data-watch>MY NAME IS</div>
+							<h1 class="title__value title__value_big" data-watch>Dmytro <span>Kuts</span></h1>
 						</div>
-						<div class="main-section__text text">
+						<div class="main-section__text text" data-watch>
 							<p>
 								I am a passionate and detail-oriented front-end developer, working on a variety of
 								projects ranging from simple websites to more complex web applications to create
@@ -50,15 +50,20 @@
 								completion of projects.
 							</p>
 						</div>
-						<div class="main-section__social social">
-							<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github"></a>
-							<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin"></a>
-							<a href="https://www.facebook.com/dmitry.kuts.9" target="_blank" class="social__link _icon-facebook"></a>
-							<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram"></a>
-						</div>
+						<ul class="main-section__social social" data-watch>
+							<li>
+								<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github"></a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin"></a>
+							</li>
+							<li>
+								<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram"></a>
+							</li>
+						</ul>
 					</div>
 					<div class="main-section__decor decor-main-section">
-						<div class="decor-main-section__box">
+						<div class="decor-main-section__box" data-watch>
 							<div class="decor-main-section__image">
 								<picture><source srcset="img/main/photo.webp" type="image/webp"><img src="img/main/photo.png" alt="Photo" /></picture>
 							</div>
@@ -71,8 +76,8 @@
 				<div class="portfolio__container">
 					<div class="portfolio__header">
 						<div class="portfolio__title title">
-							<div class="title__lable">MY WORKS</div>
-							<h2 class="title__value">Portfolio</h2>
+							<div class="title__lable" data-watch>MY WORKS</div>
+							<h2 class="title__value" data-watch>Portfolio</h2>
 						</div>
 					</div>
 					<div data-tabs data-tabs-animate class="portfolio__tabs tabs-portfolio">
@@ -90,19 +95,19 @@
 										<div class="item-project__picture">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/full-stack-modeller.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/full-stack-modeller.jpg" alt="Full Stack Modeller" /></picture>
+													<picture><source data-srcset="img/portfolio/full-stack-modeller.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/full-stack-modeller.jpg" alt="Full Stack Modeller" /></picture>
 												</div>
 											</div>
 										</div>
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">Full Stack Modeller</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>Full Stack Modeller</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													The adaptive layout of 7 pages with animation. Optimized PageSpeed
 													Insights 90+. The deadline is 6 days
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/modeller/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/modeller" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -110,23 +115,23 @@
 									</article>
 									<article class="item-project__columns item-project__columns_2">
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">
+											<h3 class="content-project__title" data-watch>
 												Portfolio Website Honored Artist of Ukraine
 											</h3>
-											<div class="content-project__text">
+											<div class="content-project__text" data-watch>
 												<p>
 													Performed full site development using such technologies as
 													HTML/SCSS/JavaScript/PHP. Collected everything using Gulp/WebPack
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://www.vvkuts.com" target="_blank" class="content-project__link _icon-link">Website</a>
 											</div>
 										</div>
 										<div class="item-project__picture item-project__picture_right">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/KutsV.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/KutsV.jpg" alt="Portfolio Website Honored Artist of Ukraine" /></picture>
+													<picture><source data-srcset="img/portfolio/KutsV.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/KutsV.jpg" alt="Portfolio Website Honored Artist of Ukraine" /></picture>
 												</div>
 											</div>
 										</div>
@@ -135,19 +140,21 @@
 										<div class="item-project__picture">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/farm-vest.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/farm-vest.jpg" alt="Full Stack Modeller" /></picture>
+													<picture><source data-srcset="img/portfolio/farm-vest.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/farm-vest.jpg" alt="Full Stack Modeller" /></picture>
 												</div>
 											</div>
 										</div>
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">Landing page day/night FarmVest</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>
+												Landing page day/night FarmVest
+											</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													The adaptive layout of the landing page day/night with animation, and
 													parallax effect.
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/landing-day-night_farm/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/landing-day-night_farm" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -155,14 +162,14 @@
 									</article>
 									<article class="item-project__columns item-project__columns_2">
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">Funiro landing Shop</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>Funiro landing Shop</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													Adaptive store layout with animation of adding products to the cart and
 													parallax effect.
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/shop-add-cart_funiro/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/shop-add-cart_funiro" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -170,7 +177,7 @@
 										<div class="item-project__picture item-project__picture_right">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/funiro.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/funiro.jpg" alt="Funiro landing Shop" /></picture>
+													<picture><source data-srcset="img/portfolio/funiro.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/funiro.jpg" alt="Funiro landing Shop" /></picture>
 												</div>
 											</div>
 										</div>
@@ -179,19 +186,21 @@
 										<div class="item-project__picture">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/alex-portfolio.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/alex-portfolio.jpg" alt="landing page portfolio Alex." /></picture>
+													<picture><source data-srcset="img/portfolio/alex-portfolio.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/alex-portfolio.jpg" alt="landing page portfolio Alex." /></picture>
 												</div>
 											</div>
 										</div>
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">landing page portfolio Alex.</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>
+												landing page portfolio Alex.
+											</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													Responsive layout with smooth full-screen scrolling to triple block with
 													added sliders and tabs.
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/landing-alex/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/landing-alex" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -199,14 +208,14 @@
 									</article>
 									<article class="item-project__columns item-project__columns_2">
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">Landing page Go Surf</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>Landing page Go Surf</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													Responsive beautiful landing page about surfing implemented with many
 													animations and various sliders with parallax effects.
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/landing_go-surf/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/landing_go-surf" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -214,7 +223,7 @@
 										<div class="item-project__picture item-project__picture_right">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/go-surf.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/go-surf.jpg" alt="Landing page Go Surf" /></picture>
+													<picture><source data-srcset="img/portfolio/go-surf.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/go-surf.jpg" alt="Landing page Go Surf" /></picture>
 												</div>
 											</div>
 										</div>
@@ -223,19 +232,19 @@
 										<div class="item-project__picture">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/big-shop.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/big-shop.jpg" alt="Big Shop" /></picture>
+													<picture><source data-srcset="img/portfolio/big-shop.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/big-shop.jpg" alt="Big Shop" /></picture>
 												</div>
 											</div>
 										</div>
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">Big Shop</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>Big Shop</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													Responsive online store, which contains a rich variety of information
 													insert sliders, a product card, and a page with filters.
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/big-shop/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/big-shop" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -249,13 +258,13 @@
 										<div class="item-project__picture item-project__picture_left">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/react-pizza.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/react-pizza.jpg" alt="Full Stack Modeller" /></picture>
+													<picture><source data-srcset="img/portfolio/react-pizza.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/react-pizza.jpg" alt="Full Stack Modeller" /></picture>
 												</div>
 											</div>
 										</div>
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">React pizza</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>React pizza</h3>
+											<div class="content-project__text" data-watch>
 												<p>
 													In this project I dealt with technologies like 'reduxjs/toolkit' for
 													data storage and manipulation, with 'react-router-dom' for navigation
@@ -263,7 +272,7 @@
 													interacting with server requests using the 'axios' library.
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://react-pizza-dmytro-kuts.vercel.app/" target="_blank" class="content-project__link _icon-link">Preview</a>
 												<a href="https://github.com/dmytro-kuts/react-pizza" target="_blank" class="content-project__link _icon-link">GitHub - code</a>
 											</div>
@@ -271,11 +280,11 @@
 									</article>
 									<article class="item-project__columns item-project__columns_2">
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">React mini project</h3>
-											<div class="content-project__text">
+											<h3 class="content-project__title" data-watch>React mini project</h3>
+											<div class="content-project__text" data-watch>
 												<p>Small various projects on react</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://dmytro-kuts.github.io/react-mini-project-quiz/" target="_blank" class="content-project__link _icon-link">Quiz</a>
 												<a href="https://dmytro-kuts.github.io/react-mini-project-photos/" target="_blank" class="content-project__link _icon-link">Photos</a>
 												<a href="https://dmytro-kuts.github.io/react-mini-project-users/" target="_blank" class="content-project__link _icon-link">Users</a>
@@ -285,7 +294,7 @@
 										<div class="item-project__picture item-project__picture_right">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/react-mini.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/react-mini.jpg" alt="React mini project" /></picture>
+													<picture><source data-srcset="img/portfolio/react-mini.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/react-mini.jpg" alt="React mini project" /></picture>
 												</div>
 											</div>
 										</div>
@@ -298,21 +307,21 @@
 										<div class="item-project__picture item-project__picture_left">
 											<div class="item-project__box">
 												<div class="item-project__image-ibg">
-													<picture><source data-srcset="img/portfolio/KutsV.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/portfolio/KutsV.jpg" alt="Portfolio Website Honored Artist of Ukraine" /></picture>
+													<picture><source data-srcset="img/portfolio/KutsV.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-watch data-src="img/portfolio/KutsV.jpg" alt="Portfolio Website Honored Artist of Ukraine" /></picture>
 												</div>
 											</div>
 										</div>
 										<div class="item-project__content content-project">
-											<h3 class="content-project__title">
+											<h3 class="content-project__title" data-watch>
 												Portfolio Website Honored Artist of Ukraine
 											</h3>
-											<div class="content-project__text">
+											<div class="content-project__text" data-watch>
 												<p>
 													Performed full site development using such technologies as
 													HTML/SCSS/JavaScript/PHP. Collected everything using Gulp/WebPack
 												</p>
 											</div>
-											<div class="content-project__actions">
+											<div class="content-project__actions" data-watch>
 												<a href="https://www.vvkuts.com" target="_blank" class="content-project__link _icon-link">Website</a>
 											</div>
 										</div>
@@ -328,82 +337,82 @@
 				<div class="experience__container">
 					<div class="experience__body">
 						<div class="experience__title title">
-							<div class="title__lable">Development</div>
-							<h2 class="title__value">Experience</h2>
+							<div class="title__lable" data-watch>Development</div>
+							<h2 class="title__value" data-watch>Experience</h2>
 						</div>
 					</div>
 					<div class="experience__items">
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/05.svg" alt="Icon" />
+								<img data-watch src="img/experience/05.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">HTML5</div>
+							<div class="item-experience__label" data-watch>HTML5</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/08.svg" alt="Icon" />
+								<img data-watch src="img/experience/08.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">CSS3</div>
+							<div class="item-experience__label" data-watch>CSS3</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/09.svg" alt="Icon" />
+								<img data-watch src="img/experience/09.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">SCSS</div>
+							<div class="item-experience__label" data-watch>SCSS</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/01.svg" alt="Icon" />
+								<img data-watch src="img/experience/01.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">JavaScript</div>
+							<div class="item-experience__label" data-watch>JavaScript</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/010.svg" alt="Icon" />
+								<img data-watch src="img/experience/010.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">ReactJS</div>
+							<div class="item-experience__label" data-watch>ReactJS</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/011.svg" alt="Icon" />
+								<img data-watch src="img/experience/011.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">Redux</div>
+							<div class="item-experience__label" data-watch>Redux</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/07.svg" alt="Icon" />
+								<img data-watch src="img/experience/07.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">Git</div>
+							<div class="item-experience__label" data-watch>Git</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/03.svg" alt="Icon" />
+								<img data-watch src="img/experience/03.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">Node.JS</div>
+							<div class="item-experience__label" data-watch>Node.JS</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/02.svg" alt="Icon" />
+								<img data-watch src="img/experience/02.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">MongoDB</div>
+							<div class="item-experience__label" data-watch>MongoDB</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/04.svg" alt="Icon" />
+								<img data-watch src="img/experience/04.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">Gulp</div>
+							<div class="item-experience__label" data-watch>Gulp</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/012.svg" alt="Icon" />
+								<img data-watch src="img/experience/012.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">WebPack</div>
+							<div class="item-experience__label" data-watch>WebPack</div>
 						</div>
 						<div class="experience__item item-experience">
 							<div class="item-experience__icon">
-								<img src="img/experience/06.svg" alt="Icon" />
+								<img data-watch src="img/experience/06.svg" alt="Icon" />
 							</div>
-							<div class="item-experience__label">Figma</div>
+							<div class="item-experience__label" data-watch>Figma</div>
 						</div>
 					</div>
 				</div>
@@ -412,40 +421,42 @@
 			<section data-watch="navigator" class="page__education education">
 				<div class="education__container">
 					<div class="education__title title">
-						<div class="title__lable">LEARNING PATH</div>
-						<h2 class="title__value">Education</h2>
+						<div class="title__lable" data-watch>LEARNING PATH</div>
+						<h2 class="title__value" data-watch>Education</h2>
 					</div>
 					<div class="education__body">
 						<div class="education__timeline timeline">
 							<div class="timeline__item">
-								<h3 class="timeline__title">Itgid.info</h3>
-								<div class="timeline__text">
+								<h3 class="timeline__title" data-watch>Itgid.info</h3>
+								<div class="timeline__text" data-watch>
 									<a href="https://itgid.info/ua/certificate/view?Certificate[uid]=shxufy9u3mxf" target="_blank" class="_icon-link">Certificate - ReactJS
 									</a>
 								</div>
-								<div class="timeline__date">January 2023</div>
+								<div class="timeline__date" data-watch>January 2023</div>
 							</div>
 							<div class="timeline__item">
-								<h3 class="timeline__title">Itgid.info</h3>
-								<div class="timeline__text">
+								<h3 class="timeline__title" data-watch>Itgid.info</h3>
+								<div class="timeline__text" data-watch>
 									<a href="https://itgid.info/ua/certificate/view?Certificate%5Buid%5D=humt58rmmmpc" target="_blank" class="_icon-link">Certificate - JavaScript</a>
 								</div>
-								<div class="timeline__date">December 2022</div>
+								<div class="timeline__date" data-watch>December 2022</div>
 							</div>
 							<div class="timeline__item">
-								<h3 class="timeline__title">Interregional Academy of Personnel Management</h3>
-								<div class="timeline__text">
+								<h3 class="timeline__title" data-watch>
+									Interregional Academy of Personnel Management
+								</h3>
+								<div class="timeline__text" data-watch>
 									Master's degree - International Economics and Banking
 								</div>
-								<div class="timeline__date">2008 - 2012</div>
+								<div class="timeline__date" data-watch>2008 - 2012</div>
 							</div>
 						</div>
 						<div class="education__content content-education">
 							<div class="content-education__image-ibg_contain">
-								<picture><source srcset="img/education/Certificate_React.webp" type="image/webp"><img src="img/education/Certificate_React.jpg" alt="Certificate_React" /></picture>
+								<picture><source srcset="img/education/Certificate_React.webp" type="image/webp"><img data-watch src="img/education/Certificate_React.jpg" alt="Certificate_React" /></picture>
 							</div>
 							<div class="content-education__image-ibg_contain">
-								<picture><source srcset="img/education/Certificate_JS.webp" type="image/webp"><img src="img/education/Certificate_JS.jpg" alt="Certificate_JS" /></picture>
+								<picture><source srcset="img/education/Certificate_JS.webp" type="image/webp"><img data-watch src="img/education/Certificate_JS.jpg" alt="Certificate_JS" /></picture>
 							</div>
 						</div>
 					</div>
@@ -454,17 +465,23 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="main-section__social social">
-					<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github"></a>
-					<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin"></a>
-					<a href="https://www.facebook.com/dmitry.kuts.9" target="_blank" class="social__link _icon-facebook"></a>
-					<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram"></a>
-				</div>
-				<div class="footer__copy">© 2023</div>
+				<ul class="main-section__social social" data-watch>
+					<li>
+						<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github"></a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin"></a>
+					</li>
+					<li>
+						<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram"></a>
+					</li>
+				</ul>
+				<div class="footer__copy" data-watch>© 2023</div>
 			</div>
 		</footer>
+
 	</div>
-	<script src="js/app.min.js?_v=20230315021154"></script>
+	<script src="js/app.min.js?_v=20230318012931"></script>
 </body>
 
 </html>

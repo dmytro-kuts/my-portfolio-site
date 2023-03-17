@@ -2,30 +2,38 @@
 .footer {
   // .footer__container
   &__container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: rem(15);
-      @include adaptiveValue("padding-top", 40, 20);
-      @include adaptiveValue("padding-bottom", 40, 20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(15);
+    @include adaptiveValue('padding-top', 40, 20);
+    @include adaptiveValue('padding-bottom', 40, 20);
   }
   // .footer__social
   &__social {
-      .social__link {
-          color: $greyColor;
-          @media (any-hover: hover){
-              &:hover{
-                  color: $violetColor;
-              }
-          }
+    .social__link {
+      color: $greyColor;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $violetColor;
+        }
       }
+    }
   }
   // .footer__copy
   &__copy {
-      color: $greyColor;
-      font-size: rem(14);
-      line-height: math.div(17 , 14);
+    color: $greyColor;
+    font-size: rem(14);
+    line-height: math.div(17, 14);
+    transform: translate(0px, 60%);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    &._watcher-view {
+      transform: translate(0px, 0);
+      opacity: 1;
+      transition: all 1s ease 1s;
+    }
   }
 }
 //====================================================================================================

@@ -1,6 +1,6 @@
 //====================================================================================================
 .main-section {
-  @include adaptiveValue("margin-bottom", 100, 20);
+  @include adaptiveValue('margin-bottom', 100, 20);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
   // .main-section__container
   &__container {
     padding-top: rem(40);
-    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue('padding-bottom', 40, 20);
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
@@ -99,6 +99,8 @@
     border-radius: rem(16);
     overflow: hidden;
     img {
+      width: 100%;
+      height: fit-content;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -111,7 +113,7 @@
 .portfolio {
   min-height: 100vh;
   // @include adaptiveValue('margin-top', 120, 40);
-  @include adaptiveValue("margin-bottom", 100, 0);
+  @include adaptiveValue('margin-bottom', 100, 0);
   // .portfolio__container
   &__container {
     padding-top: rem(60);
@@ -165,13 +167,12 @@
   }
   // .tabs-portfolio__body
   &__body {
-    
   }
   &__item {
     padding-top: rem(30);
     display: grid;
     column-gap: rem(70);
-    @include adaptiveValue(" row-gap", 100, 60);
+    @include adaptiveValue(' row-gap', 100, 60);
   }
 }
 .item-project {
@@ -180,35 +181,33 @@
     display: flex;
     align-items: center;
     gap: rem(70);
-    
-    @media (max-width:$mobile){
+
+    @media (max-width: $mobile) {
       &_1 {
         flex-direction: column-reverse;
         align-items: stretch;
       }
-      &_2{
+      &_2 {
         flex-direction: column;
         align-items: stretch;
-      } 
+      }
     }
-
   }
   // .item-project__content
   &__content {
-    @media (min-width:$mobile){
+    @media (min-width: $mobile) {
       flex: 0 1 50%;
     }
-    
   }
   // .item-project__picture
   &__picture {
-    @media (min-width:$mobile){
+    @media (min-width: $mobile) {
       flex: 0 1 50%;
       &_right {
         margin-right: rem(30);
       }
     }
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       margin-right: rem(30);
     }
   }
@@ -325,11 +324,11 @@
   &__container {
     width: 100%;
     padding-top: rem(40);
-    @include adaptiveValue("padding-bottom", 140, 20);
+    @include adaptiveValue('padding-bottom', 140, 20);
   }
   // .experience__body
   &__body {
-    @include adaptiveValue("margin-bottom", 80, 60);
+    @include adaptiveValue('margin-bottom', 80, 60);
   }
   // .experience__title
   &__title {
@@ -338,11 +337,11 @@
   &__items {
     display: grid;
     gap: rem(40);
-    @media (min-width:$mobileSmall){
+    @media (min-width: $mobileSmall) {
       grid-template-columns: repeat(auto-fit, minmax(rem(140), 1fr));
     }
-    @media (max-width:$mobileSmall){
-      grid-template-columns: repeat(auto-fit, minmax(rem(100), 1fr)); 
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(100), 1fr));
     }
   }
   // .experience__item
@@ -356,7 +355,9 @@
   justify-content: center;
   // .item-experience__icon
   &__icon {
-    &:not(:last-child) {margin-bottom: rem(10);}
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
     img {
       width: 80px;
       height: 80px;
@@ -385,7 +386,7 @@
 //========================================================================================================================================================
 .education {
   min-height: 100vh;
-  @include adaptiveValue("margin-top", 120, 60);
+  @include adaptiveValue('margin-top', 120, 60);
   // .skills__container
   &__container {
     display: flex;
@@ -404,7 +405,6 @@
     @media (min-width: $mobile) {
       grid-template-columns: 1fr 1fr;
     }
-    
   }
   // .skills__timeline
   &__timeline {
@@ -507,9 +507,8 @@
       &:hover {
         a {
           color: $violetColor;
-          &::before{
-            transform: translate(4px,0px);
-            
+          &::before {
+            transform: translate(4px, 0px);
           }
         }
       }
@@ -545,10 +544,10 @@
         transition: all 1s ease 0s;
       }
     }
-    @media (min-width:$mobile){
+    @media (min-width: $mobile) {
       padding-bottom: 60%;
     }
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       padding-bottom: 70%;
     }
   }

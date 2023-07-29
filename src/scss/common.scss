@@ -1,7 +1,6 @@
 // Заголовки, загальні БЕМ блоки та інше...
 //========================================================================================================================================================
 .title {
-  
   // .title__lable
   &__lable {
     overflow: hidden;
@@ -87,7 +86,7 @@
     opacity: 0;
     transition: all 0.3s ease 0s;
   }
-  &._watcher-view  {
+  &._watcher-view {
     li {
       transform: translate(0px, 0);
       opacity: 1;
@@ -106,17 +105,16 @@
   // .social__link
   &__link {
     font-size: rem(26);
-    &::before{
+    &::before {
       transition: all 0.4s ease 0s;
     }
-    
+
     @media (any-hover: hover) {
       &:hover {
         color: $violetColor;
-        &::before{
-          transform: translate(0px,-4px);
+        &::before {
+          transform: translate(0px, -4px);
         }
-        
       }
     }
   }

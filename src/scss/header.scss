@@ -124,7 +124,7 @@
       transition: width 0.5s ease 0s;
       border-radius: rem(25);
     }
-    &._navigator-active{
+    &._navigator-active {
       color: $violetColor;
       &::after {
         opacity: 1;
@@ -132,8 +132,8 @@
         width: 100%;
       }
     }
-    @media (any-hover: hover){
-      &:hover{
+    @media (any-hover: hover) {
+      &:hover {
         color: $violetColor;
         &::after {
           opacity: 1;

@@ -188,6 +188,11 @@ export class FullPage {
 		this.activeSection = this.sections[this.activeSectionId];
 		this.activeSection.classList.add(this.options.activeClass);
 
+		for (let index = 0; index < this.sections.length; index++) {
+			document.documentElement.classList.remove(`fp-section-${index}`);
+		}
+		document.documentElement.classList.add(`fp-section-${this.activeSectionId}`);
+
 		// Встановлення класу та присвоєння елементу для ПОПЕРЕДНЬОГО слайду
 		if (this.previousSectionId !== false) {
 			this.previousSection = this.sections[this.previousSectionId];
@@ -299,10 +304,12 @@ export class FullPage {
 			const section = this.sections[index];
 			if (index === this.activeSectionId) {
 				section.style.opacity = '1';
-				section.style.visibility = 'visible';
+				section.style.pointerEvents = 'all';
+				//section.style.visibility = 'visible';
 			} else {
 				section.style.opacity = '0';
-				section.style.visibility = 'hidden';
+				section.style.pointerEvents = 'none';
+				//section.style.visibility = 'hidden';
 			}
 		}
 	}
@@ -504,10 +511,11 @@ export class FullPage {
 	//===============================
 	// Кінець спрацьовування переходу
 	transitionend(e) {
-		if (e.target.closest(this.options.selectorSection)) {
-			this.stopEvent = false;
-			this.wrapper.classList.remove(this.options.wrapperAnimatedClass);
-		}
+		//if (e.target.closest(this.options.selectorSection)) {
+		this.stopEvent = false;
+		document.documentElement.classList.remove(this.options.wrapperAnimatedClass);
+		this.wrapper.classList.remove(this.options.wrapperAnimatedClass);
+		//}
 	}
 	//===============================
 	// Подія прокручування колесом миші
@@ -526,14 +534,6 @@ export class FullPage {
 	//===============================
 	// Функція вибору напряму
 	choiceOfDirection(direction) {
-		// Зупиняємо роботу подій
-		this.stopEvent = true;
-
-		// Якщо слайд крайні, то дозволяємо події
-		if (((this.activeSectionId === 0) && direction < 0) || ((this.activeSectionId === (this.sections.length - 1)) && direction > 0)) {
-			this.stopEvent = false;
-		}
-
 		// Встановлення потрібних id
 		if (direction > 0 && this.nextSection !== false) {
 			this.activeSectionId = (this.activeSectionId + 1) < this.sections.length ?
@@ -542,32 +542,69 @@ export class FullPage {
 			this.activeSectionId = (this.activeSectionId - 1) >= 0 ?
 				--this.activeSectionId : this.activeSectionId;
 		}
-
 		// Зміна слайдів
-		if (this.stopEvent) this.switchingSection();
+		this.switchingSection(this.activeSectionId, direction);
 	}
 	//===============================
 	// Функція перемикання слайдів
-	switchingSection(idSection = this.activeSectionId) {
-		this.activeSectionId = idSection;
-		// Встановлення події закінчення програвання анімації
-		this.wrapper.classList.add(this.options.wrapperAnimatedClass);
-		this.wrapper.addEventListener('transitionend', this.events.transitionEnd);
-		// Видалення класів
-		this.removeClasses();
-		// Зміна класів 
-		this.setClasses();
-		// Зміна стилів
-		this.setStyle();
-		// Встановлення стилів для буллетів
-		if (this.options.bullets) this.setActiveBullet(this.activeSectionId);
-		// Створення події
-		this.options.onSwitching(this);
-		document.dispatchEvent(new CustomEvent("fpswitching", {
-			detail: {
-				fp: this
+	switchingSection(idSection = this.activeSectionId, direction) {
+		if (!direction) {
+			if (idSection < this.activeSectionId) {
+				direction = -100;
+			} else if (idSection > this.activeSectionId) {
+				direction = 100;
 			}
-		}));
+		}
+
+		this.activeSectionId = idSection;
+
+		// Зупиняємо роботу подій
+		this.stopEvent = true;
+		// Якщо слайд крайні, то дозволяємо події
+		if (((this.previousSectionId === false) && direction < 0) || ((this.nextSectionId === false) && direction > 0)) {
+			this.stopEvent = false;
+		}
+
+		if (this.stopEvent) {
+			// Встановлення події закінчення програвання анімації
+			document.documentElement.classList.add(this.options.wrapperAnimatedClass);
+			this.wrapper.classList.add(this.options.wrapperAnimatedClass);
+			//this.wrapper.addEventListener('transitionend', this.events.transitionEnd);
+			// Видалення класів
+			this.removeClasses();
+			// Зміна класів 
+			this.setClasses();
+			// Зміна стилів
+			this.setStyle();
+			// Встановлення стилів для буллетів
+			if (this.options.bullets) this.setActiveBullet(this.activeSectionId);
+
+			// Встановлюємо затримку перемикання
+			// Додаємо класи напрямку руху
+			let delaySection;
+			if (direction < 0) {
+				delaySection = this.activeSection.dataset.fpDirectionUp ? parseInt(this.activeSection.dataset.fpDirectionUp) : 500;
+				document.documentElement.classList.add('fp-up');
+				document.documentElement.classList.remove('fp-down');
+			} else {
+				delaySection = this.activeSection.dataset.fpDirectionDown ? parseInt(this.activeSection.dataset.fpDirectionDown) : 500;
+				document.documentElement.classList.remove('fp-up');
+				document.documentElement.classList.add('fp-down');
+			}
+
+			setTimeout(() => {
+				this.events.transitionEnd();
+			}, delaySection);
+
+
+			// Створення події
+			this.options.onSwitching(this);
+			document.dispatchEvent(new CustomEvent("fpswitching", {
+				detail: {
+					fp: this
+				}
+			}));
+		}
 	}
 	//===============================
 	// Встановлення булетів

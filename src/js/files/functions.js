@@ -179,6 +179,8 @@ export let bodyLock = (delay = 500) => {
 export function spollers() {
 	const spollersArray = document.querySelectorAll('[data-spollers]');
 	if (spollersArray.length > 0) {
+		// Подія кліку
+		document.addEventListener("click", setSpollerAction);
 		// Отримання звичайних слойлерів
 		const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
 			return !item.dataset.spollers.split(",")[0];
@@ -205,27 +207,32 @@ export function spollers() {
 				if (matchMedia.matches || !matchMedia) {
 					spollersBlock.classList.add('_spoller-init');
 					initSpollerBody(spollersBlock);
-					spollersBlock.addEventListener("click", setSpollerAction);
 				} else {
 					spollersBlock.classList.remove('_spoller-init');
 					initSpollerBody(spollersBlock, false);
-					spollersBlock.removeEventListener("click", setSpollerAction);
 				}
 			});
 		}
 		// Робота з контентом
 		function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-			let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
-			if (spollerTitles.length) {
-				spollerTitles = Array.from(spollerTitles).filter(item => item.closest('[data-spollers]') === spollersBlock);
-				spollerTitles.forEach(spollerTitle => {
+			let spollerItems = spollersBlock.querySelectorAll('details');
+			if (spollerItems.length) {
+				spollerItems = Array.from(spollerItems).filter(item => item.closest('[data-spollers]') === spollersBlock);
+				spollerItems.forEach(spollerItem => {
+					let spollerTitle = spollerItem.querySelector('summary');
 					if (hideSpollerBody) {
 						spollerTitle.removeAttribute('tabindex');
-						if (!spollerTitle.classList.contains('_spoller-active')) {
+						if (!spollerItem.hasAttribute('data-open')) {
+							spollerItem.open = false;
 							spollerTitle.nextElementSibling.hidden = true;
+						} else {
+							spollerTitle.classList.add('_spoller-active');
+							spollerItem.open = true;
 						}
 					} else {
 						spollerTitle.setAttribute('tabindex', '-1');
+						spollerTitle.classList.remove('_spoller-active');
+						spollerItem.open = true;
 						spollerTitle.nextElementSibling.hidden = false;
 					}
 				});
@@ -233,45 +240,66 @@ export function spollers() {
 		}
 		function setSpollerAction(e) {
 			const el = e.target;
-			if (el.closest('[data-spoller]')) {
-				const spollerTitle = el.closest('[data-spoller]');
+			if (el.closest('summary') && el.closest('[data-spollers]').classList.contains('_spoller-init')) {
+				const spollerTitle = el.closest('summary');
+				const spollerBlock = spollerTitle.closest('details');
 				const spollersBlock = spollerTitle.closest('[data-spollers]');
 				const oneSpoller = spollersBlock.hasAttribute('data-one-spoller');
+				const scrollSpoller = spollerBlock.hasAttribute('data-spoller-scroll');
 				const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
 				if (!spollersBlock.querySelectorAll('._slide').length) {
-					if (oneSpoller && !spollerTitle.classList.contains('_spoller-active')) {
+					if (oneSpoller && !spollerBlock.open) {
 						hideSpollersBody(spollersBlock);
 					}
+
+					!spollerBlock.open ? spollerBlock.open = true : setTimeout(() => { spollerBlock.open = false }, spollerSpeed);
+
 					spollerTitle.classList.toggle('_spoller-active');
 					_slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
+
+					if (scrollSpoller && spollerTitle.classList.contains('_spoller-active')) {
+						const scrollSpollerValue = spollerBlock.dataset.spollerScroll;
+						const scrollSpollerOffset = +scrollSpollerValue ? +scrollSpollerValue : 0;
+						const scrollSpollerNoHeader = spollerBlock.hasAttribute('data-spoller-scroll-noheader') ? document.querySelector('.header').offsetHeight : 0;
+
+						//setTimeout(() => {
+						window.scrollTo(
+							{
+								top: spollerBlock.offsetTop - (scrollSpollerOffset + scrollSpollerNoHeader),
+								behavior: "smooth",
+							}
+						);
+						//}, spollerSpeed);
+					}
 				}
 				e.preventDefault();
 			}
-		}
-		function hideSpollersBody(spollersBlock) {
-			const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active');
-			const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
-			if (spollerActiveTitle && !spollersBlock.querySelectorAll('._slide').length) {
-				spollerActiveTitle.classList.remove('_spoller-active');
-				_slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
-			}
-		}
-		// Закриття при кліку поза спойлером
-		const spollersClose = document.querySelectorAll('[data-spoller-close]');
-		if (spollersClose.length) {
-			document.addEventListener("click", function (e) {
-				const el = e.target;
-				if (!el.closest('[data-spollers]')) {
+			// Закриття при кліку поза спойлером
+			if (!el.closest('[data-spollers]')) {
+				const spollersClose = document.querySelectorAll('[data-spoller-close]');
+				if (spollersClose.length) {
 					spollersClose.forEach(spollerClose => {
 						const spollersBlock = spollerClose.closest('[data-spollers]');
+						const spollerCloseBlock = spollerClose.parentNode;
 						if (spollersBlock.classList.contains('_spoller-init')) {
 							const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
 							spollerClose.classList.remove('_spoller-active');
 							_slideUp(spollerClose.nextElementSibling, spollerSpeed);
+							setTimeout(() => { spollerCloseBlock.open = false }, spollerSpeed);
 						}
 					});
 				}
-			});
+			}
+		}
+		function hideSpollersBody(spollersBlock) {
+			const spollerActiveBlock = spollersBlock.querySelector('details[open]');
+			if (spollerActiveBlock && !spollersBlock.querySelectorAll('._slide').length) {
+				const spollerActiveTitle = spollerActiveBlock.querySelector('summary');
+				const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+				spollerActiveTitle.classList.remove('_spoller-active');
+				_slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
+				setTimeout(() => { spollerActiveBlock.open = false }, spollerSpeed);
+			}
 		}
 	}
 }
@@ -482,20 +510,26 @@ export function showMore() {
 		function getHeight(showMoreBlock, showMoreContent) {
 			let hiddenHeight = 0;
 			const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
+			const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
 			if (showMoreType === 'items') {
 				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
 				const showMoreItems = showMoreContent.children;
 				for (let index = 1; index < showMoreItems.length; index++) {
 					const showMoreItem = showMoreItems[index - 1];
-					hiddenHeight += showMoreItem.offsetHeight;
-					if (index == showMoreTypeValue) break
+					const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
+					const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+					hiddenHeight += showMoreItem.offsetHeight + marginTop;
+					if (index == showMoreTypeValue) break;
+					hiddenHeight += marginBottom;
 				}
+				rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
 			} else {
 				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
 				hiddenHeight = showMoreTypeValue;
 			}
 			return hiddenHeight;
 		}
+
 		function getOriginalHeight(showMoreContent) {
 			let parentHidden;
 			let hiddenHeight = showMoreContent.offsetHeight;
@@ -640,8 +674,8 @@ export function getDigFromString(item) {
 	return parseInt(item.replace(/[^\d]/g, ''))
 }
 // Форматування цифр типу 100 000 000
-export function getDigFormat(item) {
-	return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+export function getDigFormat(item, sepp = ' ') {
+	return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, `$1${sepp}`);
 }
 // Прибрати клас з усіх елементів масиву
 export function removeClasses(array, className) {
@@ -713,5 +747,4 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
-
 //================================================================================================================================================================================================================================================================================================================

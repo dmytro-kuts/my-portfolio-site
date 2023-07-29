@@ -20,6 +20,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				targetElement.classList.add('_form-focus');
 				targetElement.parentElement.classList.add('_form-focus');
 			}
+			formValidate.removeError(targetElement);
 			targetElement.hasAttribute('data-validate') ? formValidate.removeError(targetElement) : null;
 		}
 	});

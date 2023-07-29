@@ -373,7 +373,7 @@
     var __webpack_module_cache__ = {};
     function __webpack_require__(moduleId) {
         var cachedModule = __webpack_module_cache__[moduleId];
-        if (void 0 !== cachedModule) return cachedModule.exports;
+        if (cachedModule !== void 0) return cachedModule.exports;
         var module = __webpack_module_cache__[moduleId] = {
             exports: {}
         };
@@ -387,12 +387,12 @@
             function testWebP(callback) {
                 let webP = new Image;
                 webP.onload = webP.onerror = function() {
-                    callback(2 == webP.height);
+                    callback(webP.height == 2);
                 };
                 webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
             }
             testWebP((function(support) {
-                let className = true === support ? "webp" : "no-webp";
+                let className = support === true ? "webp" : "no-webp";
                 document.documentElement.classList.add(className);
             }));
         }
@@ -690,7 +690,7 @@
                     easing: "easeOutQuad"
                 };
                 document.documentElement.classList.contains("menu-open") ? menuClose() : null;
-                if ("undefined" !== typeof SmoothScroll) (new SmoothScroll).animateScroll(targetBlockElement, "", options); else {
+                if (typeof SmoothScroll !== "undefined") (new SmoothScroll).animateScroll(targetBlockElement, "", options); else {
                     let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
                     targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
                     targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
@@ -750,13 +750,13 @@
             }
             getScrollWatcherConfig(paramsWatch) {
                 let configWatcher = {};
-                if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if ("null" !== paramsWatch.root) this.scrollWatcherLogging(`Эмм... батьківського об'єкта ${paramsWatch.root} немає на сторінці`);
+                if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... батьківського об'єкта ${paramsWatch.root} немає на сторінці`);
                 configWatcher.rootMargin = paramsWatch.margin;
                 if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
                     this.scrollWatcherLogging(`йой, налаштування data-watch-margin потрібно задавати в PX або %`);
                     return;
                 }
-                if ("prx" === paramsWatch.threshold) {
+                if (paramsWatch.threshold === "prx") {
                     paramsWatch.threshold = [];
                     for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
                 } else paramsWatch.threshold = paramsWatch.threshold.split(",");
@@ -807,7 +807,7 @@
             document.addEventListener("click", pageNavigationAction);
             document.addEventListener("watcherCallback", pageNavigationAction);
             function pageNavigationAction(e) {
-                if ("click" === e.type) {
+                if (e.type === "click") {
                     const targetElement = e.target;
                     if (targetElement.closest("[data-goto]")) {
                         const gotoLink = targetElement.closest("[data-goto]");
@@ -818,17 +818,17 @@
                         if (modules_flsModules.fullpage) {
                             const fullpageSection = document.querySelector(`${gotoLinkSelector}`).closest("[data-fp-section]");
                             const fullpageSectionId = fullpageSection ? +fullpageSection.dataset.fpId : null;
-                            if (null !== fullpageSectionId) {
+                            if (fullpageSectionId !== null) {
                                 modules_flsModules.fullpage.switchingSection(fullpageSectionId);
                                 document.documentElement.classList.contains("menu-open") ? menuClose() : null;
                             }
                         } else gotoblock_gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
                         e.preventDefault();
                     }
-                } else if ("watcherCallback" === e.type && e.detail) {
+                } else if (e.type === "watcherCallback" && e.detail) {
                     const entry = e.detail.entry;
                     const targetElement = entry.target;
-                    if ("navigator" === targetElement.dataset.watch) {
+                    if (targetElement.dataset.watch === "navigator") {
                         document.querySelector(`[data-goto]._navigator-active`);
                         let navigatorCurrentItem;
                         if (targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)) navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`); else if (targetElement.classList.length) for (let index = 0; index < targetElement.classList.length; index++) {

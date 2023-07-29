@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Portfolio Kuts Dmytro | Front-end developer</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 
@@ -17,7 +17,7 @@
 	<meta property="og:image" content="https://dmytro-kuts.github.io/my-portfolio-site/files/cover.jpg" />
 	<meta property="og:url" content="https://dmytro-kuts.github.io/my-portfolio-site/" />
 	<meta property="og:site_name" content="Front-end developer Dmytro Kuts" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20230730012818" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230730020909" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -26,23 +26,34 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="" class="header__logo"></a>
+				<a href="./" class="header__logo"></a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><button data-goto-header data-goto=".main-section" class="menu__link">About me</button></li>
-							<li class="menu__item"><button data-goto-header data-goto=".portfolio" class="menu__link">Portfolio</button></li>
-							<li class="menu__item"><button data-goto-header data-goto=".experience" class="menu__link">Experience</button></li>
-							<li class="menu__item"><button data-goto-header data-goto=".education" class="menu__link">Education</button></li>
+							<li class="menu__item">
+								<button data-goto-header data-goto=".main-section" class="menu__link">About me</button>
+							</li>
+							<li class="menu__item">
+								<button data-goto-header data-goto=".portfolio" class="menu__link">Portfolio</button>
+							</li>
+							<li class="menu__item">
+								<button data-goto-header data-goto=".experience" class="menu__link">Experience</button>
+							</li>
+							<li class="menu__item">
+								<button data-goto-header data-goto=".education" class="menu__link">Education</button>
+							</li>
 						</ul>
 					</nav>
 				</div>
 				<div class="header__actions">
 					<a href="https://drive.google.com/file/d/1U4Nr9Kor-y7DmN3SoF01LpOhG_qSo8M0/view?usp=share_link" target="_blank" class="header__button">Resume</a>
-					<button type="button" class="icon-menu"><span></span></button>
+					<button type="button" class="icon-menu" aria-label="Mobile menu navigate">
+						<span></span>
+					</button>
 				</div>
 			</div>
 		</header>
+
 		<main class="page">
 			<section data-watch="navigator" class="page__main main-section">
 				<div class="main-section__container">
@@ -62,13 +73,13 @@
 						</div>
 						<ul class="main-section__social social" data-watch>
 							<li>
-								<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github"></a>
+								<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github" aria-label="Link github"></a>
 							</li>
 							<li>
-								<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin"></a>
+								<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin" aria-label="Link linkedin"></a>
 							</li>
 							<li>
-								<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram"></a>
+								<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram" aria-label="Link telegram"></a>
 							</li>
 						</ul>
 					</div>
@@ -553,13 +564,13 @@
 			<div class="footer__container">
 				<ul class="main-section__social social" data-watch>
 					<li>
-						<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github"></a>
+						<a href="https://github.com/dmytro-kuts" target="_blank" class="social__link _icon-github" aria-label="Link github"></a>
 					</li>
 					<li>
-						<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin"></a>
+						<a href="https://www.linkedin.com/in/dmytro-kuts-v" target="_blank" class="social__link _icon-linkedin" aria-label="Link linkedin"></a>
 					</li>
 					<li>
-						<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram"></a>
+						<a href="https://t.me/DmytroKuts" target="_blank" class="social__link _icon-telegram" aria-label="Link telegram"></a>
 					</li>
 				</ul>
 				<div class="footer__copy" data-watch>© 2023</div>
@@ -567,7 +578,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230730012818"></script>
+	<script src="js/app.min.js?_v=20230730020909"></script>
 </body>
 
 </html>

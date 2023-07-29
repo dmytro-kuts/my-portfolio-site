@@ -118,6 +118,33 @@ h6 {
   font-size: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(43, 39, 74);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(43, 39, 74);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 2.5rem;
+  background-color: rgb(14, 13, 27);
+  border-radius: 0.1875rem;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: rgb(14, 13, 27);
+}
+
+::-webkit-resizer {
+  background-color: rgb(14, 13, 27);
+}
+
 body {
   background: -webkit-gradient(linear, left top, right top, from(rgb(32, 29, 61)), to(rgb(0, 0, 0)));
   background: linear-gradient(to right, rgb(32, 29, 61) 0%, rgb(0, 0, 0) 100%);

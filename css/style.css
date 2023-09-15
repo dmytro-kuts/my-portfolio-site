@@ -656,9 +656,7 @@ body {
 
 .decor-main-section__image img {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
